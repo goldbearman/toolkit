@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Provider } from "react-redux";
-import { firstRedicer } from "./basicRedux";
 
-import { combineReducers, createStore } from "redux";
+import {configureStore,combineReducers} from "@reduxjs/toolkit";
+import toolkitReducer from "./toolkitRedux/toolkitReducer";
 
-let reducers = combineReducers({
-  firstReducer:firstRedicer,
+const rootReducer = combineReducers({
+  toolkit: toolkitReducer,
 })
 
-const store = createStore(reducers);
+export const store = configureStore({
+  reducer: rootReducer,
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
