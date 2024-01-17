@@ -1,6 +1,6 @@
 import './App.css';
-import {  useDispatch,useSelector } from "react-redux";
-import {inc,dec} from "./toolkitRedux/toolkitReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { inc, dec } from "./toolkitSlices/toolkitSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -8,11 +8,12 @@ function App() {
   console.log(count)
   return (
     <div className="App">
-      <button onClick={() => dispatch( inc())}>Инкремент</button>
-      <button onClick={() => dispatch( dec() )}>Декремент</button>
+      <button onClick={() => dispatch(inc())}>Инкремент</button>
+      <button onClick={() => dispatch(dec())}>Декремент</button>
       <div>{count}</div>
     </div>
   );
 }
+
 export default App;
 

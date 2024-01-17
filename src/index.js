@@ -6,9 +6,11 @@ import { Provider } from "react-redux";
 
 import {configureStore,combineReducers} from "@reduxjs/toolkit";
 import toolkitReducer from "./toolkitRedux/toolkitReducer";
+import toolkitSlice from "./toolkitSlices/toolkitSlice";
+
 
 const rootReducer = combineReducers({
-  toolkit: toolkitReducer,
+  toolkit: toolkitSlice,
 })
 
 export const store = configureStore({
