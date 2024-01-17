@@ -22,5 +22,9 @@ const toolkitSlice = createSlice({
   }
 })
 
+export const addAsyncTodo = () => async (dispatch) =>{
+  setTimeout(()=>{dispatch(removeTodo())},2000)
+}
+
 export default toolkitSlice.reducer
 export const { inc, dec, addTodo, removeTodo } = toolkitSlice.actions
