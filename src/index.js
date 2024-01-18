@@ -5,12 +5,12 @@ import App from './App';
 import { Provider } from "react-redux";
 
 import {configureStore,combineReducers} from "@reduxjs/toolkit";
-import toolkitReducer from "./toolkitRedux/toolkitReducer";
-import toolkitSlice from "./toolkitSlices/toolkitSlice";
-
+// import toolkitReducer from "./toolkitRedux/toolkitReducer";
+// import toolkitSlice from "./toolkitSlices/toolkitSlice";
+import toolkitBuilder from "./toolkitBuilder/toolkitBuilder";
 
 const rootReducer = combineReducers({
-  toolkit: toolkitSlice,
+  toolkit: toolkitBuilder,
 })
 
 export const store = configureStore({
